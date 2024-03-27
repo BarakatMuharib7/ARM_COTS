@@ -84,7 +84,7 @@ void MNVIC_voidClearPendingFlag(u8 Copy_u8PeripheralID)
     {
         u8 Local_u8RegisterIndex = 0;
         Local_u8RegisterIndex = Copy_u8PeripheralID / 32;
-        NVIC -> ICPR[Local_u8RegisterIndex] = (1 << ((Copy_u8PeripheralID % 32)));
+        NVIC -> ICPR[Local_u8RegisterIndex] = (1 << (Copy_u8PeripheralID % 32));
     }
 }
 
