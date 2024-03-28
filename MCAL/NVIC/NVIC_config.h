@@ -1,5 +1,5 @@
 /*********************************************
- * Author:				Abdullah M. Abdullah
+ * Author:				Barakat S. Muharib
  * Creation Data:		16 Mar, 2024
  * Version:				v1.0
  * Compiler:			GNU ARM-GCC
@@ -8,7 +8,7 @@
  ********************************************/
 /*********************************************
  * Version	  Date				  Author				  Description
- * v1.0		  16 Mar, 2024	Abdullah M. Abdullah		  Initial Creation
+ * v1.0		  16 Mar, 2024	Barakat S. Muharib		  Initial Creation
 *********************************************/
 #ifndef NVIC_CONFIG_H
 #define NVIC_CONFIG_H

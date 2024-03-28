@@ -1,5 +1,5 @@
 /*********************************************
- * Author:				Abdullah M. Abdullah
+ * Author:				Barakat S. Muharib
  * Creation Data:		16 Mar, 2024
  * Version:				v1.0
  * Compiler:			GNU ARM-GCC
@@ -8,7 +8,7 @@
  ********************************************/
 /*********************************************
  * Version	  Date				  Author				  Description
- * v1.0		  16 Mar, 2024	Abdullah M. Abdullah		  Initial Creation
+ * v1.0		  16 Mar, 2024	Barakat S. Muharib		  Initial Creation
 *********************************************/
 #include "../include/STD_TYPES.h"
 #include "../include/BIT_MATH.h"
@@ -84,7 +84,7 @@ void MNVIC_voidClearPendingFlag(u8 Copy_u8PeripheralID)
     {
         u8 Local_u8RegisterIndex = 0;
         Local_u8RegisterIndex = Copy_u8PeripheralID / 32;
-        NVIC -> ICPR[Local_u8RegisterIndex] = (1 << (Copy_u8PeripheralID % 32));
+        NVIC -> ICPR[Local_u8RegisterIndex] = (1 << ((Copy_u8PeripheralID % 32)));
     }
 }
 
