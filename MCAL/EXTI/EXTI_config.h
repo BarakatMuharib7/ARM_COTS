@@ -13,6 +13,10 @@
 #ifndef EXTI_CONFIG_H
 #define EXTI_CONFIG_H
 
-
+/*Options:
+ * 	EXTI_PORTA
+ * 	EXTI_PORTB
+ * */
+#define     EXTI7_0_SRC_INPUT      EXTI_PORTA
 
 #endif

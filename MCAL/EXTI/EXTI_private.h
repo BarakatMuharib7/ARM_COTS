@@ -13,6 +13,10 @@
 #ifndef EXTI_PRIVATE_H
 #define EXTI_PRIVATE_H
 
+#define          EXTI_PORTA  	0
+#define          EXTI_PORTB  	1
+
+
 // 0x40013C00
 typedef struct
 {
@@ -26,5 +30,6 @@ typedef struct
 
 #define     EXTI                     ((volatile EXTI_t *)0x40013C00)//0x4001 3C00
 #define     SYSCFG_EXTICR1          *((volatile u32 *)(0x40013800+0x08))
+#define     SYSCFG_EXTICR2          *((volatile u32 *)(0x40013800+0x0C))
 
 #endif
