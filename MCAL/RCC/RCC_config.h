@@ -22,7 +22,8 @@ Options:
     RCC_CLK_HSE
     RCC_CLK_PLL
     */
-#define     RCC_CLOCK_SOURCE        RCC_CLK_HSI
+   //  HSI (16Mhz)
+#define     RCC_CLOCK_SOURCE        RCC_CLK_HSI 
 
 /*Options:
 	RCC_CLK_HSI
@@ -41,7 +42,8 @@ Options:
 	RCC_AHB_DIV_256
 	RCC_AHB_DIV_512
 	*/
-#define		RCC_AHB_PRESCALER	RCC_AHB_DIV_2
+    // so Clock freq on AHB is 16(HSI)/2 = 8 MHz
+#define		RCC_AHB_PRESCALER	RCC_AHB_DIV_2 
 
 /*Options:
     RCC_APB1_DIV_1
