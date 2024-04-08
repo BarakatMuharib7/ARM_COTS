@@ -1,7 +1,7 @@
 /*********************************************
  * Author:				Abdullah M. Abdullah
  * Creation Data:		02 Mar, 2024
- * Version:				v2.0
+ * Version:				v4.0
  * Compiler:			GNU ARM-GCC
  * Controller:			STM32F401CCU6
  * Layer:				MCAL
@@ -17,12 +17,14 @@
  *                                                        - MSTK_voidSetSingleInterval
  *                                                        - MSTK_voidSetPeriodicInterval
  *                                                        - SysTick_Handler
-
+ *
  * v2.1		  30 Mar, 2024	Abdullah M. Abdullah		  Fix the build error
 
  * v3.0		  30 Mar, 2024	Abdullah M. Abdullah		  Add New APIs
  *                                                        - MSTK_voidSTKEnable
  *                                                        - MSTK_voidSTKDisable
+ * v4.0		  08 April, 2024	Barakat S. Muharib		  Add New API
+ *                                                        - MSTK_voidDelayMicroSeconds
 *********************************************/
 #include "../include/STD_TYPES.h"
 #include "../include/BIT_MATH.h"
@@ -138,4 +140,14 @@ void SysTick_Handler(void)
     }
     // Flag Clearance
     LocalTempVar = GET_BIT(STK -> CTRL, 16);
+}
+
+void MSTK_voidDelayMicroSeconds(u32 Copy_u32Ticks)
+{
+    u32 Local_u32Counter;
+    /* Copy_u32Ticks micro seconds delay */
+    for(Local_u32Counter = 0; Local_u32Counter < Copy_u32Ticks; Local_u32Counter++)
+    {
+        asm ("NOP");// 1 micro Second
+    }
 }
