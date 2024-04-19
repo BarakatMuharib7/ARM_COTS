@@ -1,14 +1,15 @@
 /*********************************************
  * Author:				Barakat S. Muharib
  * Creation Data:		23 Feb, 2024
- * Version:				v1.0
+ * Version:				v2.0
  * Compiler:			GNU ARM-GCC
  * Controller:			STM32F401CCU6
  * Layer:				MCAL
  ********************************************/
 /*********************************************
  * Version	  Date				  Author				  Description
- * v1.0		  23 Feb, 2024	Barakat S. Muharib		  Initial Creation
+ * v1.0		  23 Feb, 2024	Barakat S. Muharib		      Initial Creation
+ * v2.0		  19 Apr, 2024	Abdullah M. Abdullah		  Adding the Definition of the AFR registers, and some new definitions
 *********************************************/
 #ifndef GPIO_PRIVATE_H
 #define GPIO_PRIVATE_H
@@ -119,6 +120,10 @@
 
 #define		PIN_OFFSET					2
 #define		GPIO_LCKK16        	        16
+
+#define     AF_MASK					0b1111
+#define     AF_BITS_OFFSET			4
+#define     AF_HIGH_BITS_OFFSET		8
 
 
 

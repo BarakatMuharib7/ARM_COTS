@@ -1,15 +1,16 @@
 /*********************************************
  * Author:				Barakat S. Muharib
  * Creation Data:		23 Feb, 2024
- * Version:				v1.0
+ * Version:				v2.0
  * Compiler:			GNU ARM-GCC
  * Controller:			STM32F401CCU6
  * Layer:				MCAL
  ********************************************/
 /*********************************************
  * Version	  Date				  Author				  Description
- * v1.0		  23 Feb, 2024	Barakat S. Muharib		  Initial Creation
- * v1.1       29 Feb, 2024	Barakat S. Muharib		  unify GPIO Pins for all registers
+ * v1.0		  23 Feb, 2024	Barakat S. Muharib		    Initial Creation
+ * v1.1       29 Feb, 2024	Barakat S. Muharib		    unify GPIO Pins for all registers
+ * v2.0		  19 Apr, 2024	Abdullah M. Abdullah        Adding a new API to set the Alternative functions
 *********************************************/
 
 // Header Guard File
@@ -106,6 +107,7 @@ void MGPIO_voidSetPortOutputValue(u8 Copy_u8PortName, u32 Copy_u32OutputValue);
 void MGPIO_voidSetPortPullupDownResister(u8 Copy_u8PortName, u32 Copy_u32PullupDownState);
 u32  MGPIO_u32GetInputPortValue(u8 Copy_u8PortName);
 void MGPIO_voidLockPort(u8 Copy_u8PortName);
+void MGPIO_voidSetAlternativeFunction(u8 Copy_u8PortName, u8 Copy_u8PinNumber, u8 Copy_u8AlternativeFunction);
 
 #endif
 
